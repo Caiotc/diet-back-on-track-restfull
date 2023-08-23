@@ -1,0 +1,39 @@
+{
+  "name": "diet-back-on-track-api",
+  "version": "1.0.0",
+  "description": "This is the restfull api fro DBT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caiotc/diet-back-on-track-restfull.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Resfull",
+    "api",
+    "knex"
+  ],
+  "author": "Caio Theodoro de Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caiotc/diet-back-on-track-restfull/issues"
+  },
+  "homepage": "https://github.com/Caiotc/diet-back-on-track-restfull#readme",
+  "dependencies": {
+    "@fastify/cookie": "^9.0.4",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.21.0",
+    "knex": "^2.5.1",
+    "sqlite3": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.3",
+    "tsx": "^3.12.7"
+  }
+}
