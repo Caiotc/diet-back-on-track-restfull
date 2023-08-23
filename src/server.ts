@@ -1,12 +1,18 @@
-import fastify from "fastify";
-import cookie from "@fastify/cookie";
+import { env } from "./env";
+import knex, { Knex } from "knex";
 
-const app = fastify();
-
-app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log("Server Running");
-  });
+export const config: Knex.Config = {
+  client: "pg",
+  connection: {
+    host: env.DATABSE_HOST,
+    port: env.DATABASE_PORT,
+    user: env.DATABSE_USER,
+    password: env.DATABASE_PASSWORD,
+  },
+  migrations: {
+    extension: "ts",
+    directory: "./db/migrations",
+  },
+  useNullAsDefault: true,
+};
+export const setup = knex(config);
