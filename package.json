@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "This is the restfull api fro DBT",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
+    "dev": "tsx watch src/server.ts"
   },
   "repository": {
     "type": "git",
