@@ -4,9 +4,10 @@ import { z } from "zod";
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("production"),
-  DATABSE_HOST: z.string(),
-  DATABASE_PORT: z.number(),
-  DATABSE_USER: z.string(),
+  DATABASE_CONNECTION_STRING: z.string(),
+  DATABASE_HOST: z.string(),
+  DATABASE_PORT: z.string(),
+  DATABASE_USER: z.string(),
   DATABASE_PASSWORD: z.string(),
 });
 
